@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
     StoreComponent,
     AdminComponent
   ],
+
   imports: [
     BrowserModule
   ],
