@@ -2,19 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ModelComponent } from './model/model.component';
-import { AdminComponent } from './admin/admin.component';
 import { StoreModule } from "./store/store.module";
 import { RouterModule } from '@angular/router';
 import { StoreComponent } from './store/store.component';
 import { CheckoutComponent } from './store/checkout.component';
 import { CartDetailComponent } from './store/cartDetail.component';
+import { StoreFirstGuard } from './storeFirst.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModelComponent,
-    AdminComponent
   ],
   imports: [BrowserModule, StoreModule,
     RouterModule.forRoot([
@@ -23,7 +20,7 @@ import { CartDetailComponent } from './store/cartDetail.component';
       { path: "checkout", component: CheckoutComponent },
       { path: "**", redirectTo: "/store" }
     ])],
-  providers: [],
+  providers: [StoreFirstGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
