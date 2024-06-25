@@ -5,12 +5,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from "@angular/material/button";
 import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 
 const features: any[] = [MatToolbarModule, MatSidenavModule, MatIconModule,
-  MatDividerModule, MatButtonModule, MatTableModule];
+  MatDividerModule, MatButtonModule, MatTableModule, MatPaginatorModule];
 @NgModule({
   imports: [features],
   exports: [features]
 })
 export class MaterialFeatures { }
+
